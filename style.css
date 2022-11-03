@@ -1,0 +1,477 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Monaco", monospace;
+}
+  
+body {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(168deg, rgba(2,0,36,1) 32%, rgba(88,18,100,1) 99%); 
+}
+
+header{
+  box-shadow: 1px 1px 5px 0px var(--gray);  
+}
+  
+/* Typography  */
+  
+h1 {
+  font-size: 32px;
+  padding: 5px;
+  font-weight: bolder;
+  color: #8a7798;
+}
+  
+h2{
+  font-size: 16px;
+  padding: 10px;
+  color: #6930C3;
+}
+  
+p {
+  padding: 5px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,li {
+  list-style: none;
+  padding: 5px;
+}
+
+
+/* Navigation */
+
+.logo{
+  color: white;
+  font-size: 50px;
+}
+
+.nav-bar{
+  padding: 0 24px;
+  display: flex;
+  min-height: 75px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-menu{
+  gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+  .nav-link  {
+    padding: 10px;
+    color: white;
+    transition: 0.7s ease;
+
+  }
+
+  .nav-link:hover{
+    opacity: 0.6;
+    color: black;
+    background-color: white;
+  }
+
+  .menu-lines{
+    display:none;
+    cursor:pointer;
+  }
+
+.lines{
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+  /*Intro*/
+.section{
+    height: 100vh;
+    color:white;
+}
+
+.intro {
+  padding-top: 150px;
+  text-align: center;
+
+}
+
+.introcontainer {
+    padding-top: 25px;
+    display: block;
+    width: 100%;
+}
+ 
+.into-sub{
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+  .scroll-v {
+    padding: 7px 20px;
+    font-size: 16px;
+    border-radius: 100px; 
+    background-color: #6930C3;
+    box-shadow: rgba(91, 56, 162, 0.2) 0 -25px 18px -14px inset,rgba(46, 44, 187, 0.15) 0 1px 2px,rgba(91, 56, 162, 0.2) 0 2px 4px,rgba(91, 56, 162, 0.2) 0 4px 8px,rgba(91, 56, 162, 0.2) 0 8px 16px,rgba(91, 56, 162, 0.2) 0 16px 32px;
+    color:white;
+    border: none;
+    user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: all 250ms;   
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .scroll-v:hover {
+    box-shadow: rgba(155, 129, 177, 0.35) 0 -25px 18px -14px inset,rgba(136, 116, 174, 0.25) 0 1px 2px,rgba(91, 56, 162, 0.2) 0 2px 4px,rgba(91, 56, 162, 0.2) 0 4px 8px,rgba(91, 56, 162, 0.2) 0 8px 16px,rgba(91, 56, 162, 0.2) 0 16px 32px;
+    transform: scale(1.10);
+  }
+
+  /*whoami*/
+
+  .about{
+    padding-bottom: 40px;
+  }
+
+  .card{
+    padding: 40px;
+  }
+  .about , .exper , .skills h1{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: left;
+  }
+
+  .sub-about{
+    padding: 15px;
+    text-align: left;
+  }
+
+.profile-img {
+    padding-top: 10px;
+    left: 15%;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("profile.png");
+    animation: float 4s ease-in-out infinite;
+}
+
+.glow{
+  filter: drop-shadow(-20px 0px 1.75em rgb(81,147,194));
+  padding: 5px;
+}
+
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-22px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+
+
+  /*experience*/
+
+  .exper,.skills {
+    padding-bottom: 60px;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .card-e{
+    padding: 25px;
+  }
+
+  .timeline:before {
+    content: '';
+    position:absolute;
+    height:80%;
+    left:50%;
+    width:2px;
+    top:-20px;
+    background:#fff;
+    z-index:1;
+  }
+
+  .timeline{
+    position:relative;
+    margin: 50px auto;
+    max-width:1000px;
+    padding:50px 0;
+  }
+  
+  
+  .timeline ul{
+    margin:0;
+    padding:0 ;
+  }
+  
+  .timeline ul li{
+    list-style:none;
+    box-sizing:border-box; 
+    line-height:normal;
+    position:relative;
+    width:50%;
+    padding: 40px 70px;
+  }
+  
+  .timeline ul li .right_content h2{
+    color:rgba(59,112,239,1);
+    padding:0px 2px 18px 0px;
+  }
+  .timeline ul li:nth-child(odd){
+    float:left;
+    text-align:right;
+    clear:both;
+  }
+  
+  .timeline ul li:nth-child(even){
+    float:right;
+    text-align:left;
+    clear:both;
+  }
+  
+  .left_content{
+    padding-bottom:20px;
+  }
+  
+  .timeline ul li:nth-child(odd):before{
+    content: '';
+    position:absolute;
+    width:10px;
+    height:10px;
+    background:rgba(59,112,239,1);
+    border-radius:50%;
+    box-shadow: 0 0 0 3px rgba(58,112,239,0.2);
+    right:-6px;
+    top:24px;
+    z-index:1;
+  }
+  
+  .timeline ul li:nth-child(even):before{
+    content: '';
+    position:absolute;
+    width:10px;
+    height:10px;
+   background:rgba(59,112,239,1);
+    border-radius:50%;
+    box-shadow: 0 0 0 3px rgba(58,112,239,0.2);
+    left:-6px;
+    top:24px;
+  }
+  
+  .timeline ul li:nth-child(odd) .left_content{
+    position:absolute;
+    top:12px;
+    right:-165px;
+    margin:0;
+    padding:8px 16px;
+
+    color:#fff;
+    box-shadow:0 0 0 3px rgba(59,112,239,0.3);
+    border-radius:18px;
+    
+  }
+  
+  .timeline ul li:nth-child(even) .left_content{
+    position:absolute;
+    top:12px;
+    left:-165px;
+    margin:0;
+    padding:8px 16px;
+    color:#fff;
+    box-shadow:0 0 0 3px rgba(59,112,239,0.3);
+    border-radius:18px;
+    
+  }
+
+  /*Skills*/
+
+  .terminal-window {
+    color: white;
+    text-align: left;
+    width: auto;
+    height: 360px;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .terminal-window .terminal {
+    color: white;
+    font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    bottom: 0;
+    overflow: auto;
+  }
+
+/*Footer*/
+  
+  .top-side{
+    padding:25px;
+    text-align: left;
+  }
+
+  .top-side ul,li{
+    padding:15px;
+  }
+
+  i{
+    padding: 10px;
+  }
+
+
+
+  /*Effects*/
+
+
+
+  
+  
+  /* Styles for Screens */
+  
+  /* Breakpoint Small devices at 650px and down */
+  
+  @media screen and (max-width: 700px)   {
+    body {
+      font-size: 20px;
+    }
+
+    .menu-lines{
+      display: block;
+    }    
+    
+    .menu-lines.active .lines:nth-child(1){
+      transform: translateY(8px) rotate(-45deg);
+    }
+
+    .menu-lines.active .lines:nth-child(2){
+      opacity: 0;
+    }
+
+    .menu-lines.active .lines:nth-child(3){
+      transform: translateY(-8px) rotate(45deg);
+    }
+
+    .nav-menu{
+      position: fixed;
+      width: 100%;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      opacity: 0.9;
+      transition: 0.3s;
+      text-align: center;
+      flex-direction: column;
+      background: rgb(2,0,36);
+      background: linear-gradient(175deg, rgba(2,0,36,1) 41%, rgba(88,18,100,1) 99%); 
+      z-index: 1;
+    }
+
+    .nav-item{
+      margin: 16px 0;
+
+    }
+
+    .nav-menu.active{
+      left: 0;
+
+    }
+
+    .timeline{
+      width:100%;
+    }
+    .timeline:before{
+      left:20px;
+    }
+    .timeline ul li:nth-child(odd),
+    .timeline ul li:nth-child(even){
+      width:100%;
+      text-align:left;
+     padding-left:50px; 
+    }
+    
+    .timeline ul li:nth-child(odd):before
+      {
+      top:-18px;
+      left:16px;
+    
+    }
+    .timeline ul li:nth-child(even):before
+    { 
+      top:-18px;
+      left:16px;
+    }
+    
+      .timeline ul li:nth-child(odd) .left_content,
+    .timeline ul li:nth-child(even) .left_content
+    {
+      top:-30px;
+      left:50px;
+      right:inherit;
+    }
+ 
+}
+  
+  /* Breakpoint Medium devices at 800px and up  */
+  
+  @media screen and (min-width: 800px) {
+
+    .wrapper{
+      margin: 145px ;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+ 
+  }
+  
+  /* Breakpoint Large devices at 1200px and up) */
+  @media only screen and (min-width: 1000px) and (orientation: landscape) {
+
+    .wrapper{
+      margin: 200px ;
+    }
+    
+    .timeline{
+      width:100%;
+    }
+  
+
+  }
+  
