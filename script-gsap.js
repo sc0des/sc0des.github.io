@@ -10,9 +10,9 @@ gsap.utils.toArray(".section").forEach((section, i) => {
   });
 });
 
-gsap.utils.toArray('.profile-img').forEach(star=>{
-    gsap.fromTo(star,{
-        rotation:450,
+gsap.utils.toArray('.introcontainer').forEach(items=>{
+    gsap.fromTo(items,{
+        rotation:-1,
         opacity:0,
         y:100
     },{
@@ -21,9 +21,10 @@ gsap.utils.toArray('.profile-img').forEach(star=>{
         y:0,
         duration:0.5,
         delay:0.5,
-        scrollTrigger:star
+        scrollTrigger:items
     })
 })
+
 
 
 ScrollTrigger.create({
